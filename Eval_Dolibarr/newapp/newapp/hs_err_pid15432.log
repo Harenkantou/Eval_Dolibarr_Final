@@ -1,0 +1,266 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3554), pid=15432, tid=7344
+#
+# JRE version:  (25.0.3+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.0.3+9-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\bin\m2.conf -Dmaven.home=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest -Dlibrary.jansi.path=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\lib\jansi-native -Dmaven.multiModuleProjectDirectory=D:\S6\Eval_Dolibarr\Eval_Dolibarr\newapp\newapp org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run
+
+Host: 12th Gen Intel(R) Core(TM) i5-12450H, 12 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.7019)
+Time: Fri Jul 10 09:35:34 2026 elapsed time: 0.009318 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000027708907620):  JavaThread "Unknown thread" [_thread_in_vm, id=7344, stack(0x000000c964400000,0x000000c964500000) (1024K)]
+
+Stack: [0x000000c964400000,0x000000c964500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x7aa709]  (no source info available)
+V  [jvm.dll+0x7749ed]  (no source info available)
+V  [jvm.dll+0x9f7433]  (no source info available)
+V  [jvm.dll+0x9f9a21]  (no source info available)
+V  [jvm.dll+0x9fa133]  (no source info available)
+V  [jvm.dll+0x2fd266]  (no source info available)
+V  [jvm.dll+0x7a6935]  (no source info available)
+V  [jvm.dll+0x799d87]  (no source info available)
+V  [jvm.dll+0x3f5d88]  (no source info available)
+V  [jvm.dll+0x3fdcf6]  (no source info available)
+V  [jvm.dll+0x3ea45e]  (no source info available)
+V  [jvm.dll+0x3ea718]  (no source info available)
+V  [jvm.dll+0x3c1575]  (no source info available)
+V  [jvm.dll+0x3c21fe]  (no source info available)
+V  [jvm.dll+0x9be2b4]  (no source info available)
+V  [jvm.dll+0x45a9b2]  (no source info available)
+V  [jvm.dll+0x9a20e2]  (no source info available)
+V  [jvm.dll+0x4fb801]  (no source info available)
+V  [jvm.dll+0x4fd0f1]  (no source info available)
+C  [jli.dll+0x5406]  (no source info available)
+C  [ucrtbase.dll+0x37b0]  (no source info available)
+C  [KERNEL32.DLL+0x2e8d7]  (no source info available)
+C  [ntdll.dll+0x8c53c]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe8fd41008, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x0000027708972e40 WorkerThread "GC Thread#0"                     [id=14544, stack(0x000000c964500000,0x000000c964600000) (1024K)]
+  0x000002770898b610 ConcurrentGCThread "G1 Main Marker"            [id=33376, stack(0x000000c964600000,0x000000c964700000) (1024K)]
+  0x000002770898bfb0 WorkerThread "G1 Conc#0"                       [id=17988, stack(0x000000c964700000,0x000000c964800000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe8f36646a]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffe8fdc9828] Heap_lock - owner thread: 0x0000027708907620
+
+Heap address: 0x0000000704a00000, size: 4022 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0xffffffffffffffff, Narrow klass shift: -1
+Encoding Range: [0xffffffffffffffff - 0x000000007fffffff), (2147483648 bytes)
+Klass Range:    [0x0000000000000000 - 0x0000000000000000), (0 bytes)
+Klass ID Range:  [4294967295 - 0) (1)
+No protection zone.
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total reserved 4118528K, committed 0K, used 0K [0x0000000704a00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+
+Card table byte_map: [0x0000027723220000,0x0000027723a00000] _byte_map_base: 0x000002771f9fb000
+
+Marking Bits: (CMBitMap*) 0x00000277089733d0
+ Bits: [0x0000027723a00000, 0x00000277278d8000)
+
+GC Heap Usage History (0 events):
+No events
+
+Metaspace Usage History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.005 Loaded shared library C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7dd010000 - 0x00007ff7dd01e000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\java.exe
+0x00007fff69480000 - 0x00007fff696e8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff67e60000 - 0x00007fff67f29000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff66bd0000 - 0x00007fff66fc8000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff668c0000 - 0x00007fff66a0b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff380d0000 - 0x00007fff380ee000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\VCRUNTIME140.dll
+0x00007fff05a70000 - 0x00007fff05a86000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\jli.dll
+0x00007fff67bb0000 - 0x00007fff67d77000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff4e020000 - 0x00007fff4e2b4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7019_none_3e06ffa0e335b8a8\COMCTL32.dll
+0x00007fff671f0000 - 0x00007fff67217000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff67d80000 - 0x00007fff67dab000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff68030000 - 0x00007fff680d9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff66a10000 - 0x00007fff66b3c000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff665d0000 - 0x00007fff66673000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff68780000 - 0x00007fff687b1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff3fd50000 - 0x00007fff3fe42000 	C:\Program Files\Windhawk\Engine\1.7.3\64\windhawk.dll
+0x00007fff68340000 - 0x00007fff683f4000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff67db0000 - 0x00007fff67e56000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff69300000 - 0x00007fff69418000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff5b5f0000 - 0x00007fff5b5fc000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\vcruntime140_1.dll
+0x00007ffeb8a40000 - 0x00007ffeb8acd000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\msvcp140.dll
+0x00007ffe8ef90000 - 0x00007ffe8feba000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\server\jvm.dll
+0x00007fff69280000 - 0x00007fff692f4000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff65b00000 - 0x00007fff65b5e000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007fff58820000 - 0x00007fff58855000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff5caa0000 - 0x00007fff5caab000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff65ab0000 - 0x00007fff65ac4000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007fff65390000 - 0x00007fff653ab000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff5a420000 - 0x00007fff5a42a000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\jimage.dll
+0x00007fff63ce0000 - 0x00007fff63f22000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fff687c0000 - 0x00007fff68b4b000 	C:\WINDOWS\System32\combase.dll
+0x00007fff68480000 - 0x00007fff68557000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fff45360000 - 0x00007fff4539c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fff67140000 - 0x00007fff671e5000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffee36c0000 - 0x00007ffee36de000 	C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\java.dll
+0x00007fff68b50000 - 0x00007fff68ce7000 	C:\WINDOWS\System32\ole32.dll
+0x00007fff67220000 - 0x00007fff6796f000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fff66fd0000 - 0x00007fff6713b000 	C:\WINDOWS\System32\wintypes.dll
+
+JVMTI agents: none
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7019_none_3e06ffa0e335b8a8;C:\Program Files\Windhawk\Engine\1.7.3\64;C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin\server
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\bin\m2.conf -Dmaven.home=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest -Dlibrary.jansi.path=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\lib\jansi-native -Dmaven.multiModuleProjectDirectory=D:\S6\Eval_Dolibarr\Eval_Dolibarr\newapp\newapp 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run
+java_class_path (initial): C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\boot\plexus-classworlds-2.11.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 4217372672                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5898240                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122945536                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251789312                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4217372672                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Release file:
+<release file has not been read>
+Environment Variables:
+JAVA_HOME=C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25
+CLASSPATH=.;C:\ojdbc11.jar;C:\mysql-connector-j-9.1.0.jar;C:\tomcat\lib\servlet-api.jar;
+PATH=c:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\gradle\latest\bin;C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\bin;C:\Users\HARENKANTO\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\25\bin;D:\app\php-8.5.5-nts-Win32-vs17-x64;C:\Program Files\nodejs;C:\Program Files\Java\jdk-21\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files\Erlang OTP\bin;C:\Program Files\RabbitMQ Server\rabbitmq_server-4.3.2\sbin;C:\Program Files\Java\OpenJDK17U-jdk_x64_windows_hotspot_17.0.17_10\jdk-17.0.17+10\bin;C:\app\HARENKANTO\product\11.2.0\dbhome_1\bin;D:\S5\Mr Rojo\Firebase\Cloud\carte\osmosis-0.49.2\bin;D:\app\wildfly-10.1.0.Final\wildfly-10.1.0.Final\bin;D:\S5\Prog\apache-ant-1.10.15-bin\apache-ant-1.10.15\bin;D:\app\wildfly-28.0.1.Final\wildfly-28.0.1.Final\bin;C:\Program Files\PostgreSQL\15\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;D:\apache-tomcat-10.1.28\bin;C:\Users\HARENKANTO\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\Git\cmd;C:\Program Files\gnuplot\bin;D:\tomcat\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\Win;C:\Users\HARENKANTO\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\HARENKANTO\AppData\Local\Programs\Python\Python313\;C:\Users\HARENKANTO\AppData\Local\Programs\Python\Launcher\;C:\Users\HARENKANTO\AppData\Local\Microsoft\WindowsApps;C:\Users\HARENKANTO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HARENKANTO\AppData\Local\GitHubDesktop\bin;C:\Users\HARENKANTO\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\HARENKANTO\AppData\Roaming\npm;C:\Users\HARENKANTO\AppData\Local\ComposerSetup\bin;C:\Users\HARENKANTO\AppData\Roaming\Composer\vendor\bin;C:\Users\HARENKANTO\AppData\Local\Programs\Windsurf\bin;C:\Users\HARENKANTO\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\HARENKANTO\AppData\Local\Programs\Antigravity\bin;C:\Users\HARENKANTO\AppData\Local\Programs\Antigravity IDE\bin;c:\Users\HARENKANTO\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\scripts\noConfigScripts;c:\Users\HARENKANTO\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts
+USERNAME=HARENKANTO
+LANG=en_US.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+TMP=C:\Users\HARENK~1\AppData\Local\Temp
+TEMP=C:\Users\HARENK~1\AppData\Local\Temp
+
+
+
+
+Compilation memory statistics disabled.
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.7019)
+OS uptime: 2 days 0:56 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x424, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, gfni, f16c, cet_ibt, cet_ss
+Processor Information for the first 12 processors :
+  Max Mhz: 2000, Current Mhz: 2000, Mhz Limit: 2000
+
+Memory: 4k page, system-wide physical 16085M (1542M free)
+TotalPageFile size 29542M (AvailPageFile size 209M)
+current process WorkingSet (physical memory assigned to process): 14M, peak: 14M
+current process commit charge ("private bytes"): 65M, peak: 317M
+
+vm_info: OpenJDK 64-Bit Server VM (25.0.3+9-LTS) for windows-amd64 JRE (25.0.3+9-LTS), built on 2026-04-21T00:00:00Z with MS VC++ 17.12 (VS2022)
+
+END.

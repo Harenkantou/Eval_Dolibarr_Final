@@ -1,0 +1,7 @@
+Nouvelle page pour un tableau 
+Mois    | Nom employés | Reste à payer     
+Annéé                   
+Trier par mois 
+Pour la colonne Reste payer on a croisement entre les colones Mois + Année et employé 
+Lien montant => Détail du reste à payer (Salaire + Paiement), Détail salaire et Paiement une nouvelle page ou en bas 
+R

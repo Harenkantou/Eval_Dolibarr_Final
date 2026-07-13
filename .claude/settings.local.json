@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"D:/S6/Eval_Dolibarr/Eval_Dolibarr/NewApp_Dolibarr\")",
+      "Bash(ls src/services src/views/frontoffice)"
+    ]
+  }
+}

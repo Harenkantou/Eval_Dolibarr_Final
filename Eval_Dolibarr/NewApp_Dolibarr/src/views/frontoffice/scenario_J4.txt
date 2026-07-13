@@ -1,0 +1,39 @@
+Scenario J4:
+Reset 
+Import
+
+Insert Jour férieé:
+14/02/2024
+22/02/2024
+
+Générer salaire entre 2 date
+Heure min: 38
+Heure max: 42
+
+13/02/2024 et 20/02/2024
+montant 200
+
+generer salaire avec mois + année:
+filtre poste: technicien
+fevrier: 2024
+salaire:jour:  20
+maj ferié: 100
+coche samedi + Dimanche
+majoration: 0%
+
+generer paiement:
+fevrier 2024
+montant 1600
+Poste prio: technicien
+
+generer salaire avec mois année: 
+mars 2024
+salaire/ jour: 20
+filtre poste: Comptable
+maj jour férieé: 100%
+coche samedi + Dimanche
+majoration: 0%
+
+
+Resultat:
+620 et 250 

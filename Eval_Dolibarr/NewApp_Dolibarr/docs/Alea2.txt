@@ -1,0 +1,44 @@
+Alea2:
+Nouvelle page pour generer paiement 
+
+Champ an bas generer : Montant 
+Insertion Montant => Bouton Payer => Ordre de paiement selon ces conditions
+
+ Filtre 1: Mois + Annéee par exemple: Fev 2024 par rapport au salaire
+ Champ pour choisir le poste prioritaire par exemple: Comptable : first, ...
+
+ Filtre 2: Date_debut_ selon intervalle salaire par exemple: 01, 05, 10, => first : 01 
+ 
+ le reste du paiement, 
+    date aloh indrindra , ex: Rabe 01, Rabe 03 => first Rabe 01
+    par exemple s'il reste 300 à payer et qu'on a 100 pour le reste on doit pouvoir payer ce 100 
+
+
+ Afficher en bas le montant salaire du salarié concerné payé et paiement concerné
+   employé concerné
+   Salaire total à payer 
+   Salaire deja payé
+
+On doit aussi prendre en compte que des paiements sont deja importés via import 
+
+ http://localhost:5173/frontoffice/salaries/79/pay
+
+ Scénario à faire:
+ 
+ Reset
+ Import
+ Insert Jour férieé: 14/02/2024 ET 22/02/2024
+
+ 
+ Filtre: Heure min 38 heure max: 42
+ Date debut: 13/02/24
+ Date fin: 20/02/24
+ Montant: 200
+
+ Filtre salarié: Poste Technicien
+ Fevrier Fev 2024 /20/ 100
+
+ Fevrier 2024: Technicien/1600
+
+ Résultat:
+On doit obtenir 11 opérations pour le résultat 

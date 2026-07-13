@@ -1,0 +1,23 @@
+Nouvelle page pour générer Salaire => Mois et années  avec champs : Salaire par jour et pourcentage  en plus : nommé majoration jour férié 
+
+Générer pour les jours qui n'ont pas encore de salaire par ex: 01 à 10 Janvier alors on devra générer l'intervalle de 11 à 31 Janvier Si il y a jour férié lors de la genération on ajoute le prouventage de la majoration 
+Ce qu'on doit générer : Intervalle + Somme de tous les montants 
+
+Il peut y avoir plusieurs intervale 
+
+1 ligne = 1 montant 
+
+Scénario:
+Poste Technicien 
+Reset
+Import
+Créer 2jours Feries
+14/02/2024
+22/02/2024
+Salaire par jour: 20
+Majoration: 100 
+
+Résultat obtenu: 
+Salaire par genre: 
+Hommes: 2930, Euro
+Femmes: 1447, 56 Euro

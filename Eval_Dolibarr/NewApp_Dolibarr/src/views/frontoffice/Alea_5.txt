@@ -1,0 +1,8 @@
+Alea_5
+
+Dans la page on a actuellement, la liste des reste à payer groupé par mois et par employé
+Dans la même page ResteAPayerMensuel, on ajoute un  bouton Payer pour chaque ligne et chaque colonne
+Lorsqu'on clique sur le bouton Payer de la ligne on doit effectuer un paiement pour l'ensemble de cette ligne et de même piur la colonne
+On doit aussi ajouter un champ en pourcentage, pour dire quel pourcentage de ce qu'on doit payer par ligne/colonne doit-on payer exactement?
+
+On insère d'abord le pourcentage ensuite on calcule le paiement à effectuer pour la ligne ou la colonne selon ce pourcentage 

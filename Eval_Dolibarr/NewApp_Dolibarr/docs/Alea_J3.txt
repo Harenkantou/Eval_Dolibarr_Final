@@ -1,0 +1,7 @@
+Génerer Salaire: Mois + Année avec champ salaire/ j et Majoration
+Ajout 2 case à cocher Samedi et Dialanche , si on les coche => on intègre le salaire de ces jours 
+Avec un seul nouveau champ majoration pour Samedi et Dimanche possible 200%
+Generer 
+Toujours prendre en compte, majoration jour férié par exemple samedi: jour ferié et coché: 100 et 150 on doit prndre 150 
+
+On doit pouvoir en déduire la majoration pour samedi individuellement et de même pour dimanche
